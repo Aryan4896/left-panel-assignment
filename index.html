@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Left Panel Navigation</title>
+    <link rel="stylesheet" href="i.css" />
+    <style>
+      /* Your CSS styles here */
+    </style>
+    <script>
+      function showContent(id) {
+        const contentDivs = document.querySelectorAll(".content > div");
+        contentDivs.forEach((div) => {
+          if (div.id === id) {
+            div.style.display = "block";
+          } else {
+            div.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-panel">
+        <ul>
+          <li><a href="#" onclick="showContent('home')">Home</a></li>
+          <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+          <li>
+            <a href="#" onclick="showContent('information')">Information</a>
+          </li>
+          <li><a href="#" onclick="showContent('guide')">Guide</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div id="home">
+          <h2>Home</h2>
+          <img src="home.avif" alt="Home Image" />
+          <p>Welcome to the home page!</p>
+        </div>
+        <div id="contact">
+          <h2>Contact</h2>
+          <img src="con.avif" alt="Contact Image" />
+          <p>Contact information goes here.</p>
+        </div>
+        <div id="information">
+          <h2>Information</h2>
+          <img
+            src="realistic-circular-diagram-infographic_23-2148980965.avif"
+            alt="Information Image"
+          />
+          <p>Additional information goes here.</p>
+        </div>
+        <div id="guide">
+          <h2>Guide</h2>
+          <img
+            src="depositphotos_7593713-stock-illustration-person-highway-travel-to-road.jpg"
+            alt="Guide Image"
+          />
+          <p>Guide information goes here.</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      showContent("home");
+    </script>
+  </body>
+</html>
+i
